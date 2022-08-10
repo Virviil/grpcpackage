@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "grpcpackage"
+version = "0.1.0"
+description = "Common proto collection example"
+authors = ["Dmitry Rubinstein <rubinsteindb@gmail.com>"]
+exclude = ["grpcpackage/*.proto"]
+include = ["grpcpackage/*.py"]
+
+[tool.poetry.dependencies]
+python = "3.9"
+protobuf = "~=3.19"
+
+[tool.poetry.dev-dependencies]
+grpcio = "^1.39.0"
+grpcio-tools = "^1.39.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

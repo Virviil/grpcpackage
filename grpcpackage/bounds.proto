@@ -1,0 +1,19 @@
+syntax = "proto2";
+package grpcpackage.bounds;
+
+import "grpcpackage/common.proto";
+
+message Bound {
+  required string Name = 1;
+  required grpcpackage.common.Point corner0 = 2;
+  required grpcpackage.common.Point corner1 = 3;
+}
+
+message BoundsRequest {}
+message BoundsResponse {
+  repeated Bound bounds = 1;
+}
+
+service Bounds {
+  rpc GetBounds (BoundsRequest) returns (BoundsResponse) {}
+}
